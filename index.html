@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+
+
   <!--标题-->
   <title>生命在于运动</title>
 
@@ -33,6 +36,8 @@
 
 <style>
   #header {
+    /*position的设置很关键，不加的话在手机端竖屏显示区域会在左上方且无法填满*/
+    position: fixed;
     width: 100%;
     height: 50px;
     z-index: 0;
@@ -43,6 +48,8 @@
   }
 
   #header #title {
+    position: fixed;
+
     width: 550px;
     height: 100%;
     margin: 0 auto;
@@ -157,30 +164,6 @@
 
   }
 
-  .content {
-
-    height: 100%;
-    transition: all .5s;
-    display: flex;
-    justify-content: space-around;
-    z-index: 0;
-    
-  }
-
-  .map {
-    height: 100%;
-    width: 100%;
-    margin-top: 55px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .pages {
-    height: 100%;
-    width: 100%;
-    margin-top: 50px;
-    
-  }
-
   #check:checked~.content {
     margin-left: 300px;
   }
@@ -218,6 +201,25 @@
     width: 100%;
     height: 100%;
   }
+  .content {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    transition: all .5s;
+    display: flex;
+    justify-content: space-around;
+    z-index: 0;
+    flex:1;
+    
+  }
+  .pages {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    
+  }
+
   #container_iframe {
     width: 100%;
     height: 100%;
@@ -225,6 +227,7 @@
 }
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 </style>
@@ -254,7 +257,7 @@ html, body {
       </li> -->
     <ul>
       <li style="text-align:center">
-        <a href="http://ess.sustech.edu.cn/New-detail-id-655.html" target="_blank" style="display:inline "><i
+        <a href="https://ess.sustech.edu.cn/New-detail-id-655.html" target="_blank" style="display:inline "><i
             class="fa fa-plane" aria-hidden="true"></i>青海科考</a>&nbsp
         <a href="https://www.bilibili.com/video/BV1Yg411k7gG?spm_id_from=333.999.0.0&vd_source=47b2afbe45bd57551a7d1e2080630131&t=65.8"
           target="_blank" style="display:inline"><i class="fa fa-file-video-o" aria-hidden="true"></i></a>
@@ -286,7 +289,7 @@ html, body {
     </ul>
     <ul>
       <li style="text-align: center;">
-        <a href="http://www.xstones.wiki/sustech" target="container_iframe" style="display:inline">
+        <a href="https://www.xstones.wiki/sustech" target="container_iframe" style="display:inline">
           <i class="fa fa-plane" aria-hidden="true"></i>逃离南科大 &nbsp<i class="fa fa-file-video-o" aria-hidden="true"></i>
         </a>
       </li>
@@ -302,7 +305,7 @@ html, body {
 
     <ul>
       <li style="text-align: center;">
-        <a href="http://drive.xstones.wiki" target="container_iframe" style="display:inline">
+        <a href="https://drive.xstones.wiki" target="container_iframe" style="display:inline">
           <i class="fa fa-plane" aria-hidden="true"></i>drive &nbsp<i class="fa fa-file-video-o" aria-hidden="true"></i>
         </a>
       </li>
@@ -323,7 +326,7 @@ html, body {
 <script>
 
  /**系统初始默认页面 **/
- $('#container_iframe').attr("src", "http://www.xstones.wiki");
+ $('#container_iframe').attr("src", "https://yommyko.xyz");
 
 </script>
 
